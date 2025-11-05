@@ -24,3 +24,5 @@ pnpm-debug.log*
 .idea/
 
 config.toml
+# Local Netlify folder
+.netlify

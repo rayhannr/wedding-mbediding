@@ -1,0 +1,1040 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+const cols = Array.from({ length: 12 }, (_, i) => i + 3)
+const rows = Array.from({ length: 11 }, (_, i) => i + 10)
+
+interface Props {
+  rootClassName?: string
+}
+
+const { rootClassName } = Astro.props
+---
+
+<div
+  class={twMerge(
+    'absolute inset-0 m-auto w-[1500px] h-[1500px] min-w-[1500px] min-h-[1500px] left-1/2 -translate-x-1/2',
+    rootClassName
+  )}
+  style="mask-image:radial-gradient(ellipse 100% 25% at center, black 0%, transparent 50%);-webkit-mask-image:radial-gradient(ellipse 100% 65% at center, black 0%, rgba(0,0,0,0.1) 70%, transparent 80%)"
+>
+  <svg
+    viewBox="0 0 1728 696"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute inset-0 m-auto w-full h-full translate-x-[-0.1%] translate-y-[-0.6%]"
+  >
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1419.46 -73.842)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1523.02 -29.8848)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1626.58 14.0723)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1730.13 58.0298)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1119.08 -98.8472)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1222.64 -54.8901)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1326.19 -10.9329)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1429.75 33.0244)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1533.31 76.9819)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1636.87 120.939)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1740.42 164.896)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 922.258 -79.8953)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1025.81 -35.938)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1129.37 8.01904)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1232.93 51.9766)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1336.48 95.9336)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1440.04 139.891)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1543.6 183.848)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1647.16 227.806)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1750.71 271.763)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 621.877 -104.901)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 725.435 -60.9434)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 828.991 -16.9861)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 932.548 26.9712)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1036.1 70.9282)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1139.66 114.886)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1243.22 158.843)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1346.77 202.8)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1450.33 246.757)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1553.89 290.715)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1657.45 334.672)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1761 378.629)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 425.054 -85.9487)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 528.611 -41.9915)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 632.167 1.96582)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 735.725 45.9229)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 839.281 89.8804)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 942.838 133.837)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1046.4 177.795)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1149.95 221.752)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1253.51 265.709)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1357.07 309.667)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1460.62 353.624)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1564.18 397.581)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1667.74 441.538)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1771.29 485.496)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 228.23 -66.9968)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 331.787 -23.0396)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 435.344 20.9175)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 538.901 64.875)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 642.458 108.832)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 746.014 152.79)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 849.571 196.747)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 953.128 240.704)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1056.69 284.661)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1160.24 328.619)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1263.8 372.576)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1367.36 416.533)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1470.91 460.49)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1574.47 504.448)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1678.03 548.405)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1781.58 592.362)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 31.4067 -48.0447)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 134.964 -4.08765)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 238.521 39.8696)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 342.078 83.8271)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 445.634 127.784)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 549.191 171.742)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 652.748 215.699)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 756.305 259.656)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 859.861 303.613)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 963.418 347.57)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1066.98 391.528)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1170.53 435.485)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1274.09 479.442)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1377.65 523.399)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1481.2 567.357)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1584.76 611.314)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1688.32 655.271)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -61.8599 14.8643)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 41.6973 58.8218)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 145.254 102.779)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 248.811 146.736)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 352.368 190.693)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 455.924 234.651)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 559.481 278.608)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 663.038 322.565)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 766.595 366.522)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 870.151 410.479)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 973.708 454.437)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1077.27 498.394)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1180.82 542.352)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1284.38 586.309)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1387.94 630.266)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1491.49 674.223)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -51.5698 121.731)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 51.9873 165.688)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 155.544 209.646)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 259.101 253.603)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 362.658 297.56)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 466.214 341.517)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 569.771 385.475)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 673.328 429.432)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 776.885 473.389)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 880.441 517.346)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 983.999 561.303)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1087.56 605.261)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1191.11 649.218)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 1294.67 693.175)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -41.2798 228.597)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 62.2773 272.555)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 165.834 316.512)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 269.391 360.469)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 372.948 404.426)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 476.504 448.384)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 580.061 492.341)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 683.618 536.298)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 787.175 580.255)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 890.731 624.212)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 994.289 668.17)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -30.9897 335.464)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 72.5674 379.421)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 176.124 423.378)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 279.681 467.335)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 383.238 511.293)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 486.794 555.25)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 590.351 599.208)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 693.908 643.165)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 797.465 687.122)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -20.6992 442.33)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 82.8574 486.288)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 186.415 530.245)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 289.971 574.202)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 393.528 618.159)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 497.084 662.116)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 -10.4092 549.197)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"></rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 93.1475 593.154)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 196.704 637.111)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+    <rect
+      width="112.5"
+      height="112.5"
+      transform="matrix(0.920505 0.390731 -0.829038 0.559193 300.261 681.068)"
+      class="stroke-black dark:stroke-white"
+      stroke-opacity="0.15"
+      stroke-dasharray="1 3"
+    >
+    </rect>
+  </svg>
+  <div
+    class="grid absolute w-full h-full inset-0 m-auto tran"
+    style="transform:skew(-56deg, 23deg) translate(-16px, 7px);grid-template-columns:repeat(auto-fill, 90px);grid-template-rows:repeat(auto-fill, 55px)"
+  >
+    {
+      rows.map((row) =>
+        cols.map((col) => (
+          <div
+            class="grid-box w-full h-full opacity-0 hover:opacity-100 transition-opacity ease-linear duration-1000 hover:duration-150 bg-foreground/10"
+            style={`grid-column: ${col}; grid-row: ${row}`}
+          />
+        ))
+      )
+    }
+  </div>
+</div>

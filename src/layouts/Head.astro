@@ -1,0 +1,66 @@
+---
+import { ClientRouter } from 'astro:transitions'
+import { GROOM_NICKNAME } from 'astro:env/client'
+import { BRIDE_NICKNAME } from 'astro:env/client'
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/rz.webp" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="robots" content="noindex" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="google" content="notranslate" />
+  <title>Walimatul 'Urs {GROOM_NICKNAME} dan {BRIDE_NICKNAME}</title>
+  {
+    [
+      'BricolageGrotesque-Bold.woff2',
+      'BricolageGrotesque-Regular.woff2',
+      'BricolageGrotesque-Medium.woff2',
+      'Mackinac-Medium.woff2'
+    ].map((font) => <link rel="preload" href={`/fonts/${font}`} as="font" type="font/woff2" crossorigin />)
+  }
+  <ClientRouter />
+</head>
+
+<script is:inline>
+  const DARK_THEME_CLASS = 'dark'
+  const COLOR_MODE = 'colorMode'
+  const LIGHT_THEME = 'light'
+  const DARK_THEME = 'dark'
+
+  const root = document.documentElement
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+
+  const getInitialColorMode = () => {
+    const prevColorMode = localStorage.getItem(COLOR_MODE)
+
+    if (prevColorMode) return prevColorMode
+    if (window.matchMedia('prefers-color-scheme: light').matches) {
+      return LIGHT_THEME
+    }
+
+    return DARK_THEME
+  }
+
+  const setInitialColorMode = (mode) => {
+    let color = '#f5f5f5'
+
+    if (mode === LIGHT_THEME) {
+      root.classList.remove(DARK_THEME_CLASS)
+    } else {
+      root.classList.add(DARK_THEME_CLASS)
+      color = '#0a0a0a'
+    }
+    metaThemeColor?.setAttribute('content', color)
+  }
+
+  const init = () => {
+    const initialColorMode = getInitialColorMode()
+    setInitialColorMode(initialColorMode)
+  }
+
+  init()
+  document.addEventListener('astro:after-swap', init)
+</script>

@@ -1,0 +1,20 @@
+---
+import Head from './Head.astro'
+import '../styles/globals.css'
+import { Toaster } from '@/components/ui/sonner'
+import Gradient from '@/components/common/Gradient.astro'
+import ThemeToggler from '@/components/common/ThemeToggler.astro'
+---
+
+<!doctype html>
+<html lang="id" class="light">
+  <Head />
+  <body class="w-full min-h-full">
+    <ThemeToggler />
+    <Toaster client:only />
+    <div class="relative w-full h-full overflow-hidden bg-background dark:bg-background/95 z-0">
+      <Gradient />
+      <slot />
+    </div>
+  </body>
+</html>

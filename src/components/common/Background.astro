@@ -1,0 +1,32 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+interface Props {
+  className?: string
+}
+
+const { className } = Astro.props
+---
+
+<div class={twMerge('bg-grid grid-vertical', className)}></div>
+<div class={twMerge('bg-grid grid-horizontal', className)}></div>
+
+<style>
+  .bg-grid {
+    background-size: 20px 20px;
+    image-rendering: pixelated;
+    mask-image: linear-gradient(to bottom, white 0%, white 33%, transparent 90%);
+    @apply -z-30 bg-left-top max-h-[640px] inset-0 absolute from-neutral-200 dark:from-neutral-800 to-[1px];
+  }
+
+  .dark .bg-grid {
+    mask-image: linear-gradient(to bottom, black 0%, black 33%, transparent 90%);
+  }
+
+  .grid-horizontal {
+    @apply bg-gradient-to-r;
+  }
+  .grid-vertical {
+    @apply bg-gradient-to-b;
+  }
+</style>

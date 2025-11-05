@@ -1,16 +1,59 @@
 ---
-import '../styles/global.css';
-const { content } = Astro.props;
+import { twMerge } from 'tailwind-merge'
+
+interface Props {
+  className?: string
+  noDefaultClass?: boolean
+}
+const { className, noDefaultClass } = Astro.props
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+<main class={twMerge(!noDefaultClass && 'px-8 sm:px-0 w-full sm:w-3/4 lg:w-1/2 m-auto', className)}>
+  <slot />
+</main>
+
+<script>
+  let isTouching = false
+  let lastTarget: any = null
+
+  const activateBox = (el: Element | null) => {
+    if (!el?.classList.contains('grid-box')) return
+
+    el?.classList.remove('opacity-0')
+    el?.classList.remove('duration-1000')
+    el?.classList.add('opacity-100')
+    el?.classList.add('duration-150')
+
+    setTimeout(() => {
+      el?.classList.remove('opacity-100')
+      el?.classList.remove('duration-150')
+      el?.classList.add('opacity-0')
+      el?.classList.add('duration-1000')
+    }, 1000)
+  }
+
+  document.addEventListener('touchstart', (e) => {
+    isTouching = true
+    const touch = e.touches[0]
+    const target = document.elementFromPoint(touch.clientX, touch.clientY)
+
+    activateBox(target)
+    lastTarget = target
+  })
+
+  document.addEventListener('touchmove', (e) => {
+    if (!isTouching) return
+    const touch = e.touches[0]
+    const target = document.elementFromPoint(touch.clientX, touch.clientY)
+
+    if (target !== lastTarget) {
+      activateBox(target)
+      lastTarget = target
+    }
+  })
+
+  document.addEventListener('touchend', () => {
+    isTouching = false
+    lastTarget = null
+  })
+</script>
