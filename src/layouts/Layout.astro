@@ -11,7 +11,7 @@ import ThemeToggler from '@/components/common/ThemeToggler.astro'
   <Head />
   <body class="w-full min-h-full">
     <ThemeToggler />
-    <Toaster client:only />
+    <Toaster closeButton client:load />
     <div class="relative w-full h-full overflow-hidden bg-background dark:bg-background/95 z-0">
       <Gradient />
       <slot />

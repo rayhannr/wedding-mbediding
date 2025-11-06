@@ -1,0 +1,55 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Main from '@/layouts/Main.astro'
+import Hero from '@/components/invitation/Hero.astro'
+import Intro from '@/components/invitation/Intro.astro'
+import Couple from '@/components/invitation/Couple.astro'
+import Event from '@/components/invitation/Event.astro'
+import Confirmation from '@/components/invitation/Confirmation.astro'
+import Background from '@/components/common/Background.astro'
+import { Invitee } from '@/lib/schema'
+import { PATCH } from './api/invitees/[id]'
+import { Countdown } from '@/components/invitation/Countdown'
+import Manner from '@/components/invitation/Manner.astro'
+import Gift from '@/components/invitation/Gift.astro'
+import Outro from '@/components/invitation/Outro.astro'
+import { Wishes } from '@/components/invitation/Wishes'
+import BackgroundV2 from '@/components/common/BackgroundV2.astro'
+
+let invitee: Invitee | undefined = undefined
+
+try {
+  const response = await PATCH(Astro)
+  const data = await response.json()
+  if (data.id) {
+    invitee = { ...data }
+  }
+  if (response.status !== 200) {
+    throw new Error('error')
+  }
+} catch (error) {
+  return Astro.redirect('/not-found')
+}
+---
+
+<Layout>
+  <Background />
+  <Main noDefaultClass>
+    <Hero invitee={invitee} />
+    <div class="relative">
+      <BackgroundV2 rootClassName="-mt-24 mb-0" />
+      <Intro />
+      <Couple />
+      <Event invitee={invitee} />
+      <Countdown client:only />
+    </div>
+    <div class="relative">
+      <BackgroundV2 rootClassName="-mt-56" />
+      <Manner />
+      <Confirmation invitee={invitee} />
+      <Wishes client:only />
+    </div>
+    <Gift />
+    <Outro />
+  </Main>
+</Layout>

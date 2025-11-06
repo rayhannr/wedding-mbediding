@@ -12,11 +12,12 @@ const { className } = Astro.props
 <div class={twMerge('bg-grid grid-horizontal', className)}></div>
 
 <style>
+  @reference "../../styles/global.css";
   .bg-grid {
     background-size: 20px 20px;
     image-rendering: pixelated;
     mask-image: linear-gradient(to bottom, white 0%, white 33%, transparent 90%);
-    @apply -z-30 bg-left-top max-h-[640px] inset-0 absolute from-neutral-200 dark:from-neutral-800 to-[1px];
+    @apply -z-30 bg-top-left max-h-[640px] inset-0 absolute from-neutral-200 dark:from-neutral-800 to-[1px];
   }
 
   .dark .bg-grid {
@@ -24,9 +25,9 @@ const { className } = Astro.props
   }
 
   .grid-horizontal {
-    @apply bg-gradient-to-r;
+    @apply bg-linear-to-r;
   }
   .grid-vertical {
-    @apply bg-gradient-to-b;
+    @apply bg-linear-to-b;
   }
 </style>

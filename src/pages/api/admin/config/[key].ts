@@ -11,7 +11,7 @@ export const PATCH: APIRoute = async ({ params, request }) => {
   try {
     const config = await request.json()
 
-    const { data, error } = await supabase.from('config').update(config).eq('key', key).select('*').single()
+    const { data, error } = await supabase.from('config').upsert(config).eq('key', key).select('*').single()
     if (error) throw error
     return new Response(JSON.stringify(data), {
       status: 200,

@@ -32,7 +32,7 @@ export const DELETE: APIRoute = async ({ params }) => {
   }
 
   try {
-    const { data, error } = await supabase.from('invitee').delete().eq('id', id).select().single()
+    const { data, error } = await supabase.from('invitee').delete().eq('id', id).select()
     if (error) throw error
     return new Response(JSON.stringify(data), {
       status: 200,

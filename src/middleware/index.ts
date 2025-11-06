@@ -35,5 +35,5 @@ export const onRequest = defineMiddleware(async ({ url, redirect, cookies }, nex
     return unauthorizedResponse
   }
 
-  return next()
+  return response
 })

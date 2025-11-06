@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import 'sonner/dist/styles.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -198,4 +199,9 @@ body {
 
 .link {
   @apply underline underline-offset-4 text-foreground;
+}
+
+[data-sonner-toast][data-styled='true'] [data-close-button] {
+  left: unset;
+  right: -1rem;
 }

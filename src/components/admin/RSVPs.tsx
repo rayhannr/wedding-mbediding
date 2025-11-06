@@ -62,7 +62,6 @@ export const RSVPs = () => {
     }
   ]
 
-  console.log(rsvp.data, 'ajgile')
   const table = useTable({ columns, data: rsvp.data || [] })
 
   const onDebouncedFilter = useDebouncedCallback((value: string) => {

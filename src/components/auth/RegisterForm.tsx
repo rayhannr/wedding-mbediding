@@ -41,6 +41,7 @@ export const RegisterForm = () => {
               <FormLabel className="sr-only">Email</FormLabel>
               <FormControl>
                 <Input
+                  disabled
                   placeholder="name@example.com"
                   type="email"
                   autoCapitalize="none"
@@ -60,13 +61,15 @@ export const RegisterForm = () => {
             <FormItem className="space-y-0 grid gap-1">
               <FormLabel className="sr-only">Password</FormLabel>
               <FormControl>
-                <PasswordInput placeholder="password" autoCapitalize="none" autoCorrect="off" {...field} />
+                <PasswordInput disabled placeholder="password" autoCapitalize="none" autoCorrect="off" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">{isSubmitting && <Loader2 className="animate-spin" />} Daftar</Button>
+        <Button type="submit" disabled>
+          {isSubmitting && <Loader2 className="animate-spin" />} Daftar
+        </Button>
         <p className="text-sm text-muted-foreground">Note: Udah gak bisa bikin akun ya kak karena kami sudah punya 1 admin</p>
       </form>
     </Form>

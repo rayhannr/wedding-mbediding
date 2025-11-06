@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Copy, CopyCheck } from 'lucide-react'
 import { Button } from '../ui/button'
-import { useToast } from '@/hooks/use-toast'
+import { toast } from 'sonner'
 
 interface Props {
   content: string
@@ -9,7 +9,6 @@ interface Props {
 
 export const CopyButton = ({ content }: Props) => {
   const [isCopied, setIsCopied] = useState(false)
-  const { toast } = useToast()
 
   useEffect(() => {
     if (!isCopied) return
@@ -30,7 +29,7 @@ export const CopyButton = ({ content }: Props) => {
       onClick={() => {
         setIsCopied(true)
         navigator.clipboard.writeText(content)
-        toast({ title: 'Berhasil disalin!', duration: 1500 })
+        toast.success('Berhasil disalin!', { duration: 1500 })
       }}
     >
       {isCopied ? <CopyCheck /> : <Copy />}
