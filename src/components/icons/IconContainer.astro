@@ -1,0 +1,18 @@
+---
+import { twMerge } from 'tailwind-merge'
+
+interface Props {
+  color?: string
+}
+
+const { color } = Astro.props
+---
+
+<div
+  class={twMerge(
+    'flex justify-center items-center shrink-0 bg-gradient-to-br ring-1 shadow-xl rounded-xl w-12 h-12 relative',
+    color
+  )}
+>
+  <slot />
+</div>
