@@ -1,0 +1,30 @@
+---
+import { Button } from '@/components/ui/button'
+import { LoginForm } from '@/components/auth/LoginForm'
+import Layout from '@/layouts/Layout.astro'
+import Main from '@/layouts/Main.astro'
+import { getTokens } from '@/lib/auth'
+
+const { cookies, redirect } = Astro
+const { accessToken, refreshToken } = getTokens(cookies)
+
+if (accessToken && refreshToken) {
+  return redirect('/admin')
+}
+---
+
+<Layout>
+  <Main className="py-24 h-screen flex flex-col space-y-6 place-content-center max-w-96">
+    <div class="flex flex-col space-y-2 text-center">
+      <h1 class="text-2xl font-semibold tracking-tight">Login</h1>
+      <p class="text-sm text-muted-foreground">
+        Belum punya akun? <Button asChild variant="link">
+          <a href="/register" class="text-primary underline-offset-4 hover:underline">Daftar</a>
+        </Button>
+      </p>
+    </div>
+    <div>
+      <LoginForm client:load />
+    </div>
+  </Main>
+</Layout>

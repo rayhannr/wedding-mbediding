@@ -1,0 +1,24 @@
+---
+import { Button } from '@/components/ui/button'
+import Layout from '@/layouts/Layout.astro'
+import Main from '@/layouts/Main.astro'
+import { RegisterForm } from '@/components/auth/RegisterForm'
+
+export const prerender = true
+---
+
+<Layout>
+  <Main className="py-24 h-screen flex flex-col space-y-6 place-content-center max-w-96">
+    <div class="flex flex-col space-y-2 text-center">
+      <h1 class="text-2xl font-semibold tracking-tight">Bikin Akun</h1>
+      <p class="text-sm text-muted-foreground">
+        Udah punya akun? <Button asChild variant="link">
+          <a href="/login" class="text-primary underline-offset-4 hover:underline">Login</a>
+        </Button>
+      </p>
+    </div>
+    <div>
+      <RegisterForm client:only />
+    </div>
+  </Main>
+</Layout>

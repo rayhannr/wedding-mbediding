@@ -1,0 +1,12 @@
+---
+import { Dashboard } from '@/components/admin/Dashboard'
+import Layout from '@/layouts/Layout.astro'
+import Main from '@/layouts/Main.astro'
+---
+
+<Layout>
+  <Main className="py-24">
+    <h1 class="scroll-m-20 text-4xl font-medium tracking-tight lg:text-5xl mb-6 font-title">Dashboard</h1>
+    <Dashboard client:only />
+  </Main>
+</Layout>

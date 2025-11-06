@@ -119,6 +119,12 @@ Copy `.env.template` to `.env` and configure the following variables:
 - Customize invitation content in `src/pages/[id].astro`
 - Modify admin dashboard in `src/components/admin/`
 
-### Note on Gift Registry
+### Note
+
+#### Gift section
 
 Bank accounts and shipping address are hardcoded in `src/components/invitation/Gift.astro` instead of using environment variables. This is because they require a more complex structure (with colors, icons, and copy button configurations) that would be cumbersome to manage through environment variables.
+
+### Environment variables
+
+`ADMIN_USERID` can't be empty even if you haven't registered an account. You can follow the `.env.template` by setting it to `dummyid` to start.

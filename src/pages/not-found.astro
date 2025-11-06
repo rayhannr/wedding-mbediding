@@ -1,0 +1,18 @@
+---
+import BackgroundV2 from '@/components/common/BackgroundV2.astro'
+import Layout from '@/layouts/Layout.astro'
+import Main from '@/layouts/Main.astro'
+
+export const prerender = true
+---
+
+<Layout>
+  <BackgroundV2 />
+  <Main className="py-24 h-screen flex items-center justify-center flex-col text-center">
+    <h1 class="my-2 text-4xl font-title uppercase tracking-wider relative pointer-events-none">Lu tuh gak diajak</h1>
+    <img
+      src="/images/404.png"
+      class="max-w-96 lg:max-w-lg relative dark:invert dark:grayscale dark:brightness-0 pointer-events-none"
+    />
+  </Main>
+</Layout>
