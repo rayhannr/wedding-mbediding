@@ -51,8 +51,6 @@ npx supabase db push
 
 5. Enable registration and create admin account
 
-- In `src/components/auth/RegisterForm.tsx`, remove the `disabled` attribute from the form inputs and submit button
-- In `src/pages/api/auth/register.ts`, uncomment the registration endpoint code
 - Start the development server and create your admin account at `/register`
 - Confirm the registration from your email
 - Get your user ID from Supabase Authentication dashboard

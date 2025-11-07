@@ -14,12 +14,9 @@ import { BRIDE_NICKNAME } from 'astro:env/client'
   <meta name="google" content="notranslate" />
   <title>Walimatul 'Urs {GROOM_NICKNAME} dan {BRIDE_NICKNAME}</title>
   {
-    [
-      'BricolageGrotesque-Bold.woff2',
-      'BricolageGrotesque-Regular.woff2',
-      'BricolageGrotesque-Medium.woff2',
-      'Mackinac-Medium.woff2'
-    ].map((font) => <link rel="preload" href={`/fonts/${font}`} as="font" type="font/woff2" crossorigin />)
+    ['Geist-SemiBold.woff2', 'Geist-Regular.woff2', 'Geist-Medium.woff2', 'GeistMono-Medium.woff2'].map((font) => (
+      <link rel="preload" href={`/fonts/${font}`} as="font" type="font/woff2" crossorigin />
+    ))
   }
   <ClientRouter />
 </head>

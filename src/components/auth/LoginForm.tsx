@@ -7,7 +7,7 @@ import { z } from 'astro/zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
 import { User } from '@/lib/schema'
-import axios from 'axios'
+import axios, { isAxiosError } from 'axios'
 import { PasswordInput } from '../ui/password-input'
 import { toast } from 'sonner'
 
@@ -32,7 +32,11 @@ export const LoginForm = () => {
       })
       .catch((error) => {
         console.error(error)
-        toast.error('Gagal login', { description: 'Cek lagi email sama passwordnya' })
+        let description = 'Cek lagi email sama passwordnya'
+        if (isAxiosError(error) && error.status === 403) {
+          description = 'Anda tidak boleh masuk karena sudah ada akun admin lain yang dibuat'
+        }
+        toast.error('Gagal login', { description })
       })
       .finally(() => setIsSubmitting(false))
   }
