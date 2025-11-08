@@ -18,12 +18,7 @@ A modern, customizable digital wedding invitation built with Astro, React, Tailw
 
 ## Getting Started
 
-1. Clone this repository
-
-```bash
-git clone https://github.com/rayhannr/astro-wedding.git
-cd astro-wedding
-```
+1. Use this repository template
 
 2. Install dependencies
 
@@ -100,7 +95,7 @@ Copy `.env.template` to `.env` and configure the following variables:
 | `VENUE_ADDRESS` | Full address of the venue           |
 | `VENUE_GMAPS`   | Google Maps link to the venue       |
 
-## 🧞 Available Commands
+## Available Commands
 
 | Command             | Action                                        |
 | :------------------ | :-------------------------------------------- |
