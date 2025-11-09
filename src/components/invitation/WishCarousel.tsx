@@ -6,6 +6,7 @@ import { Rsvp } from '@/lib/schema'
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
 import { chunkArray, cn } from '@/lib/utils'
 import { User } from '../icons/User'
+import { useDebouncedCallback } from 'use-debounce'
 
 dayjs.extend(relativeTime)
 
@@ -19,7 +20,7 @@ export const WishCarousel = ({ wishes }: Props) => {
   const [api, setApi] = useState<CarouselApi>()
   const [carouselHeight, setCarouselHeight] = useState<number>(0)
 
-  const updateHeight = useCallback(() => {
+  const updateHeight = useDebouncedCallback(() => {
     if (!api) return
     const selectedIndex = api.selectedScrollSnap()
     const selectedSlide = api.slideNodes()[selectedIndex]
@@ -27,22 +28,24 @@ export const WishCarousel = ({ wishes }: Props) => {
     if (selectedSlide) {
       setCarouselHeight(Math.min(selectedSlide.scrollHeight, maxHeight))
     }
-  }, [api])
+  }, 100)
+
+  const updateHeightCallback = useCallback(updateHeight, [api])
 
   useEffect(() => {
     if (!api) return
 
-    updateHeight()
-    api.on('select', updateHeight)
-    api.on('resize', updateHeight)
-    window.addEventListener('resize', updateHeight)
+    updateHeightCallback()
+    api.on('select', updateHeightCallback)
+    api.on('resize', updateHeightCallback)
+    window.addEventListener('resize', updateHeightCallback)
 
     return () => {
-      api.off('select', updateHeight)
-      api.off('resize', updateHeight)
-      window.removeEventListener('resize', updateHeight)
+      api.off('select', updateHeightCallback)
+      api.off('resize', updateHeightCallback)
+      window.removeEventListener('resize', updateHeightCallback)
     }
-  }, [api, updateHeight])
+  }, [api, updateHeightCallback, wishes.length])
 
   useEffect(() => {
     if (!api) return

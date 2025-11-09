@@ -11,6 +11,7 @@ A modern, customizable digital wedding invitation built with Astro, React, Tailw
   - RSVP responses
   - Wish messages
 - Unique invitation links for each guest
+- 404 page for those uninvited
 - Real-time wish messages from guests
 - Dark/Light mode toggle
 - Location map integration
