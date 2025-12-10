@@ -21,4 +21,4 @@ jobs:
       - name: Ping
         id: ping
         run: |
-          curl -s http://wedding-mbediding.netlify.app -o page.html
+          curl -s http://wedding-mbediding.netlify.app/5JBFMJ -o page.html
